@@ -15,6 +15,10 @@
         español_f=document.getElementById("español").value;
         frances_f=document.getElementById("frances").value;
         chino_f=document.getElementById("chino").value;
+        ingles_n=document.getElementById("inglesN").value;
+        español_n=document.getElementById("españolN").value;
+        frances_n=document.getElementById("francesN").value;
+        chino_n=document.getElementById("chinoN").value;
         document.write("¡Gracias por los datos!"+"<br>")
         document.write("Su nombre es: "+nombre_f+"<br>");
         document.write("Su apellido es: "+apellido_f+"<br>");
@@ -22,11 +26,12 @@
         document.write("Usted nacien en la fecha: "+nacimiento_f+"<br>");
         document.write("Su casa esta ubicada es: "+domicilio_f+"<br>");
         document.write("Su localidad es: "+localidad_f+"<br>");
-        document.write("Usted puede hablar: "+"<br>")
-        document.write(ingles_f+"<br>");
-        document.write(español_f+"<br>");
-        document.write(frances_f+"<br>");
-        document.write(chino_f+"<br>");
+        document.write("Su nivel de idiomas es: "+"<br>")
+        document.write(ingles_f);document.write("  con un nivel de:"+ingles_n+"<br>");
+        document.write(español_f);document.write("  con un nivel de:"+español_n+"<br>");
+        document.write(frances_f);document.write("  con un nivel de:"+frances_n+"<br>");
+        document.write(chino_f);document.write("  con un nivel de:"+chino_n+"<br>");
+
     }
 </script>
 </head>
@@ -64,13 +69,13 @@
                 <h4>Nivel de conocimiento en dichos lenguajes</h4>
                 <p></p>
                 <label for="ingles">Ingles</label>
-                    <input type="range" min="0" max="100" step="1"><br>
+                    <input type="range" min="0" max="100" step="1" id="inglesN"><br>
                 <label for="español">Español</label>    
-                    <input type="range" min="0" max="100" step="1"><br>
+                    <input type="range" min="0" max="100" step="1" id="españolN"><br>
                 <label for="frances">Frances</label>    
-                    <input type="range" min="0" max="100" step="1"><br>
+                    <input type="range" min="0" max="100" step="1" id="francesN"><br>
                 <label for="chino">Chino</label>
-                    <input type="range" min="0" max="100" step="1"><br>  
+                    <input type="range" min="0" max="100" step="1" id="chinoN"><br>  
                 <p></p>    
                 <button type="submit" onclick="mostrar()">Enviar</button> <button type="reset">Reset</button>   
         </form>
